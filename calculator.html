@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Coursys Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div id="outerBox">
+        <header>
+            <br>
+            <br>
+        </header>
+        <h1>Grade Calculator</h1>
+        <section id="mainContent">
+            <h2>Activities</h2>
+            <p>Give grades to the numeric activities:</p>
+            <table id="calculatorDesign">
+                <thead>
+                    <tr id="topRowTable">
+                        <td class="topRowItem">Name</td>
+                        <td class="topRowItem">Short Name</td>
+                        <td class="topRowItem">Weight</td>
+                        <td class="topRowItem">Grade</td>
+                        <td class="topRowItem">Percent</td>
+                    </tr>
+                </thead>
+                <tbody id="calculatorFields">
+                    <tr name="activity">
+                        <td>Activity 1</td>
+                        <td>A1</td>
+                        <td><input type="number" name="weight"></td>
+                        <td><input type="number" name="score">/<input type="number" name="total"></td>
+                        <td>
+                            <p name="percent"></p>
+                        </td>
+                    </tr>
+                    <tr name="activity">
+                        <td>Activity 2</td>
+                        <td>A2</td>
+                        <td><input type="number" name="weight"></td>
+                        <td><input type="number" name="score">/<input type="number" name="total"></td>
+                        <td>
+                            <p name="percent"></p>
+                        </td>
+                    </tr>
+                    <tr name="activity">
+                        <td>Activity 3</td>
+                        <td>A3</td>
+                        <td><input type="number" name="weight"></td>
+                        <td><input type="number" name="score">/<input type="number" name="total"></td>
+                        <td>
+                            <p name="percent"></p>
+                        </td>
+                    </tr>
+                    <tr name="activity">
+                        <td>Activity 4</td>
+                        <td>A4</td>
+                        <td><input type="number" name="weight"></td>
+                        <td><input type="number" name="score">/<input type="number" name="total"></td>
+                        <td>
+                            <p name="percent"></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="buttonLeft" onclick="addActivity()">ADD ACTIVITY</button>
+            <h3 id="result">Result</h3>
+            <div id="buttonRight">
+                <button onclick="weightedAverage()">WEIGHTED</button>
+                <button onclick="meanGrade()">MEAN</button>
+            </div>
+        </section>
+        <footer>
+            <br>
+            <br>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

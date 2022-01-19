@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(166, 25, 45);
+}
+
+header,
+footer {
+    background-color: rgb(61, 57, 53);
+}
+
+#outerBox {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+h1 {
+    margin-left: 30px;
+    font-family: arial;
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}
+
+h3 {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}
+
+#mainContent {
+    background-color: rgb(233, 239, 241);
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+#buttonLeft {
+    color: white;
+    background-color: rgb(181, 17, 25);
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#buttonRight button {
+    color: white;
+    background-color: rgb(181, 17, 25);
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#buttonRight {
+    float: right;
+    margin-right: 10px;
+}
+
+#buttonLeft:hover {
+    background-color: rgb(170, 17, 25);
+}
+
+#buttonRight button:hover {
+    background-color: rgb(170, 17, 25);
+}
+
+#buttonLeft:active {
+    background-color: rgb(153, 16, 23);
+}
+
+#buttonRight button:active {
+    background-color: rgb(153, 16, 23);
+}
+
+table,
+tr,
+td {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding-left: 1%;
+}
+
+.topRowItem {
+    background-color: rgb(221, 221, 221);
+    font-weight: bold;
+}
+
+#calculatorDesign input {
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#calculatorDesign td {
+    width: 20%;
+}

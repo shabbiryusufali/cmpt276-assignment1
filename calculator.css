@@ -7,7 +7,7 @@ footer {
     background-color: rgb(61, 57, 53);
 }
 
-#outerBox {
+main {
     background-color: white;
     width: 80%;
     margin-left: auto;
@@ -83,9 +83,10 @@ h3 {
 
 table,
 tr,
-td {
+td,
+th {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid rgb(148, 148, 148);
     padding-left: 1%;
 }
 
@@ -94,7 +95,8 @@ td {
     font-weight: bold;
 }
 
-#calculatorDesign td {
+#calculatorDesign td,
+th {
     width: 20%;
 }
 

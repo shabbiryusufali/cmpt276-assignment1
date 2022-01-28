@@ -1,3 +1,9 @@
+document.getElementById("weightedAverage").addEventListener("click", weightedAverage);
+document.getElementById("mean").addEventListener("click", meanGrade);
+document.getElementById("addActivity").addEventListener("click", addActivity);
+document.addEventListener("keyup", updateWindow);
+document.addEventListener("click", updateWindow);
+
 function meanGrade() {
     let activityTable = document.getElementById("calculatorFields");
     let arrayOfActivities = activityTable.getElementsByTagName("tr");
@@ -12,17 +18,23 @@ function meanGrade() {
             averageGrade += scores[i].value / totals[i].value;
             console.log("Running average is: " + averageGrade);
             itemsToDivideBy++;
-            percent[0].innerHTML = (scores[i].value / totals[i].value) * 100 + "%";
+            percent[0].innerHTML = (scores[i].value / totals[i].value).toFixed(4) * 100 + "%";
         } else {
             alertEmpty = true;
         }
     }
 
     if (alertEmpty == true) {
-        alert("There is an activity that is either empty or is 0/0");
+        alert("There is at least one activity that is either empty or is 0/0");
 
     }
-    averageGrade = averageGrade / itemsToDivideBy;
+    averageGrade = (averageGrade / itemsToDivideBy).toFixed(4) * 1;
+    if (Number.isFinite(averageGrade) == false) {
+        console.log("ERRORED Average is: " + averageGrade);
+        alert('ERROR: ANSWER IS "NOT A NUMBER" OR IS "INFINITE"');
+        document.getElementById("result").innerHTML = "Result = ERROR";
+        return;
+    }
     document.getElementById("result").innerHTML = "Result = " + averageGrade * 100 + "%";
 }
 
@@ -41,7 +53,7 @@ function weightedAverage() {
             weightTotal += weights[i].value * 1;
             console.log("Weight of current item is: " + weights[i].value);
             averageGrade += (scores[i].value / totals[i].value) * weights[i].value;
-            percent[0].innerHTML = (scores[i].value / totals[i].value) * 100 + "%";
+            percent[0].innerHTML = (scores[i].value / totals[i].value).toFixed(4) * 100 + "%";
             console.log("Running average is: " + averageGrade);
             console.log("Weight Total is: " + weightTotal);
         } else {
@@ -49,11 +61,17 @@ function weightedAverage() {
         }
     }
     if (alertEmpty == true) {
-        alert("There is an activity that is either empty or is 0/0");
+        alert("There is at least one activity that is either empty or is 0/0");
 
     }
     console.log("Weight Total is: " + weightTotal);
-    averageGrade = averageGrade / weightTotal;
+    averageGrade = (averageGrade / weightTotal).toFixed(4) * 1;
+    if (Number.isFinite(averageGrade) == false) {
+        console.log("ERRORED Average is: " + averageGrade);
+        alert('ERROR: ANSWER IS "NOT A NUMBER" OR IS "INFINITE"');
+        document.getElementById("result").innerHTML = "Result = ERROR";
+        return;
+    }
     document.getElementById("result").innerHTML = "Result = " + averageGrade * 100 + "%";
 }
 
@@ -61,7 +79,7 @@ function addActivity() {
     let calculatorActivities = [];
     let activityTable = document.getElementById("calculatorFields");
     calculatorActivities = activityTable.getElementsByTagName("tr");
-    document.getElementById("calculatorFields").insertAdjacentHTML('beforeend', "<tr><td><label>Activity " + (calculatorActivities.length + 1) + "</label></td><td><label>A" + (calculatorActivities.length + 1) + "</label></td><td><input type=\"number\" name=\"weight\"></td><td><input type=\"number\" name=\"score\" onkeyup=\"updateWindow()\">/<input type=\"number\" name=\"total\" onkeyup=\"updateWindow()\"></td><td><p></p></td></tr>");
+    document.getElementById("calculatorFields").insertAdjacentHTML('beforeend', "<tr><td><label>Activity " + (calculatorActivities.length + 1) + "</label></td><td><label>A" + (calculatorActivities.length + 1) + "</label></td><td><input type=\"number\" name=\"weight\"></td><td><input type=\"number\" name=\"score\">/<input type=\"number\" name=\"total\"></td><td><p></p></td></tr>");
 }
 
 function updateWindow() {
@@ -76,9 +94,9 @@ function updatePercentage(arrayOfActivities) {
         let arrayOfInputs = arrayOfActivities[i].getElementsByTagName("input");
         let activityPercent = 100 * (arrayOfInputs[1].value / arrayOfInputs[2].value);
         let percentToUpdate = arrayOfActivities[i].getElementsByTagName("p");
-        if (isFinite(activityPercent)) {
+        if (Number.isFinite(activityPercent)) {
             console.log(activityPercent);
-            percentToUpdate[0].innerHTML = activityPercent + "%";
+            percentToUpdate[0].innerHTML = activityPercent.toFixed(2) + "%";
             console.log("Updated percentages");
         } else {
             percentToUpdate[0].innerHTML = "";

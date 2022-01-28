@@ -31,37 +31,73 @@
                     </thead>
                     <tbody id="calculatorFields">
                         <tr>
-                            <td><label>Activity 1</label></td>
-                            <td><label>A1</label></td>
-                            <td><input type="number" name="weight"></td>
-                            <td><input type="number" name="score" onkeyup="updateWindow()">/<input type="number" name="total" onkeyup="updateWindow()"></td>
+                            <td>
+                                <label>Activity 1</label>
+                            </td>
+                            <td>
+                                <label>A1</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
                             <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
-                            <td><label>Activity 2</label></td>
-                            <td><label>A2</label></td>
-                            <td><input type="number" name="weight"></td>
-                            <td><input type="number" name="score" onkeyup="updateWindow()">/<input type="number" name="total" onkeyup="updateWindow()"></td>
+                            <td>
+                                <label>Activity 2</label>
+                            </td>
+                            <td>
+                                <label>A2</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
                             <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
-                            <td><label>Activity 3</label></td>
-                            <td><label>A3</label></td>
-                            <td><input type="number" name="weight"></td>
-                            <td><input type="number" name="score" onkeyup="updateWindow()">/<input type="number" name="total" onkeyup="updateWindow()"></td>
+                            <td>
+                                <label>Activity 3</label>
+                            </td>
+                            <td>
+                                <label>A3</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
                             <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
-                            <td><label>Activity 4</label></td>
-                            <td><label>A4</label></td>
-                            <td><input type="number" name="weight"></td>
-                            <td><input type="number" name="score" onkeyup="updateWindow()">/<input type="number" name="total" onkeyup="updateWindow()"></td>
+                            <td>
+                                <label>Activity 4</label>
+                            </td>
+                            <td>
+                                <label>A4</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
                             <td>
                                 <p></p>
                             </td>
@@ -69,11 +105,11 @@
                     </tbody>
                 </table>
             </form>
-            <button id="buttonLeft" onclick="addActivity()">ADD ACTIVITY</button>
+            <button id="addActivity">ADD ACTIVITY</button>
             <h3 id="result">Result</h3>
             <div id="buttonRight">
-                <button onclick="weightedAverage()">WEIGHTED</button>
-                <button onclick="meanGrade()">MEAN</button>
+                <button id="weightedAverage">WEIGHTED</button>
+                <button id="mean">MEAN</button>
             </div>
         </section>
         <footer>

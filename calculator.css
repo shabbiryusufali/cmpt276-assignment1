@@ -41,7 +41,7 @@ h3 {
     width: 60%;
 }
 
-#buttonLeft {
+#addActivity {
     color: white;
     background-color: rgb(181, 17, 25);
     padding: 10px;
@@ -65,7 +65,7 @@ h3 {
     margin-right: 10px;
 }
 
-#buttonLeft:hover {
+#addActivity:hover {
     background-color: rgb(170, 17, 25);
 }
 
@@ -73,7 +73,7 @@ h3 {
     background-color: rgb(170, 17, 25);
 }
 
-#buttonLeft:active {
+#addActivity:active {
     background-color: rgb(153, 16, 23);
 }
 

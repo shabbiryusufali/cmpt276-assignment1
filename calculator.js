@@ -32,10 +32,10 @@ function meanGrade() {
     if (Number.isFinite(averageGrade) == false) {
         console.log("ERRORED Average is: " + averageGrade);
         alert('ERROR: ANSWER IS "NOT A NUMBER" OR IS "INFINITE"');
-        document.getElementById("result").innerHTML = "Result = ERROR";
+        document.getElementById("result").innerHTML = "ERROR";
         return;
     }
-    document.getElementById("result").innerHTML = "Result = " + averageGrade * 100 + "%";
+    document.getElementById("result").innerHTML = averageGrade * 100 + "%";
 }
 
 function weightedAverage() {
@@ -69,10 +69,10 @@ function weightedAverage() {
     if (Number.isFinite(averageGrade) == false) {
         console.log("ERRORED Average is: " + averageGrade);
         alert('ERROR: ANSWER IS "NOT A NUMBER" OR IS "INFINITE"');
-        document.getElementById("result").innerHTML = "Result = ERROR";
+        document.getElementById("result").innerHTML = "ERROR";
         return;
     }
-    document.getElementById("result").innerHTML = "Result = " + averageGrade * 100 + "%";
+    document.getElementById("result").innerHTML = averageGrade * 100 + "%";
 }
 
 function addActivity() {

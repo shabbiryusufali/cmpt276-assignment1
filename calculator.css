@@ -105,3 +105,8 @@ th {
     padding: 5px;
     margin: 5px;
 }
+
+#result {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}

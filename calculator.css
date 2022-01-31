@@ -1,3 +1,14 @@
+/*
+Author: Shabbir Yusufali
+Date: January 30, 2021
+Description: This document contains the CSS for the calculator.html
+file. It styles the page to closely resemble the provided image that we
+had to copy from.
+Citations:
+- Used a tool to extract RGB values from the image provided (ColorZilla)
+- Nothing referenced outside of provided resources
+*/
+
 body {
     background-color: rgb(166, 25, 45);
 }
